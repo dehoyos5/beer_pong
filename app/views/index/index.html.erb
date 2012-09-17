@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <title>Bootstrap, from Twitter</title>
@@ -18,23 +19,17 @@
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <!-- Javascript biotch -->
+    <!-- Javascript -->
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.0.24.min.js"></script>
 
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- start Mixpanel -->
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <script type="text/javascript">(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?
+        g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+        mixpanel.init("84f3f4d47a2a68b8631049e55f100f19");</script><!-- end Mixpanel -->
   </head>
 
   <body>
@@ -50,9 +45,9 @@
           <a class="brand" href="#">Pongrank</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">Pricing</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active">
+              <li><a href="../prices.html">Pricing</a></li>
+              <li><a href="https://pongrank.uservoice.com/">Contact</a></li>
             </ul>
 
             <form class="navbar-form pull-right">
@@ -95,10 +90,10 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Beer Pong!</h1>
+        <h1>Drinking Game!</h1>
         <br>
         <p>That's right! You heard me correctly, we are building a beer pong ranking system for you and your friends to enjoy. Please let us know if you wish to join the beta test .</p>
-        <p><a class="btn panel_button btn-primary btn-large">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
 
       <!-- Example row of columns -->
@@ -124,6 +119,7 @@
 
       <footer>
         <p>&copy; Company 2012</p>
+        mixpanel.track("Video play");
       </footer>
 
     </div> <!-- /container -->
@@ -145,20 +141,16 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
 
-    <script type="text/javascript">
-    Parse.initialize("GEXussBxCYlTpR98InnrYKUlBar5lhvAcTes1m3L", "GRcCPJk9gCM9BmqkS01rSshU9UKMuQDFVqT0voZS");
-    
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-      testObject.save({foo: "bar"}, {
-      success: function(object) {
-        $(".success").show();
-      },
-      error: function(model, error) {
-        $(".error").show();
-      }
-    });
-  </script>
+  
+<!-- UserVoice code -->
+<script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/cz3FKGgCz9ER8yAgpQPBBg.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
 
   </body>
 </html>
