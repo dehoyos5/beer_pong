@@ -1,10 +1,22 @@
 BeerPong::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/failure"
+
   get "index/index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
      match 'prices' => 'index#prices'
+
+
+  get   '/login', :to => 'sessions#new', :as => :login
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure', :to => 'sessions#failure'
+  get '/logout', :to => 'sessions#destroy'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
