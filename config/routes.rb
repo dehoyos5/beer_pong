@@ -8,6 +8,7 @@ BeerPong::Application.routes.draw do
   get "sessions/failure"
 
   get "index/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
